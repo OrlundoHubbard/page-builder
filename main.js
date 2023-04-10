@@ -7,5 +7,15 @@ function addText() {
 }
 
 function addImage() {
-    
+    const image = document.createElement('img');
+    image.src = 'image.jpg';
+    canvas.append(image);
 }
+
+function addButton() {
+    const button = document.createElement('button');
+    button.innerText = 'Click Me';
+    canvas.appendChild(button);
+}
+
+document.getElementById
