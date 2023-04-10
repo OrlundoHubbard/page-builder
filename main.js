@@ -1,10 +1,16 @@
 const canvas = document.getElementById('canvas');
 
 function addText() {
-    const text = document.createElement('div');
-    text.innerText = 'Enter Text here';
-    canvas.appendChild(text);
+    const text = prompt('Enter text');
+    if (text) {
+        const newText = document.createElement('div');
+        newText.innerText = text;
+        canvas.appendChild(newText);
+        addDragListeners(newText);
+    }
 }
+
+addText();
 
 function addImage() {
     const image = document.createElement('img');
