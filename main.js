@@ -18,4 +18,6 @@ function addButton() {
     canvas.appendChild(button);
 }
 
-document.getElementById
+document.getElementById('add-text').addEventListener('click', addText);
+document.getElementById('add-image').addEventListener('click', addImage);
+document.getElementById('add-button').addEventListener('click', addButton);
