@@ -1,13 +1,12 @@
 const canvas = document.getElementById('canvas');
 
 function addText() {
-    const text = prompt('Enter text');
-    if (text) {
-        const newText = document.createElement('div');
-        newText.innerText = text;
-        canvas.appendChild(newText);
-        addDragListeners(newText);
-    }
+    const newText = document.createElement('div');
+    newText.contentEditable = true;
+    newText.classList.add('draggable');
+    canvas.appendChild(newText);
+    newText.focus();
+    addDragListeners(newText);
 }
 
 addText();
